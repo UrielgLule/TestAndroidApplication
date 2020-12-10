@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerMain"
+    tools:context=".fragments.CheckBoxFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <CheckBox
+        android:id="@+id/cbE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_enabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/cbE"
+        app:layout_constraintBottom_toBottomOf="@id/cbE"/>
+
+    <CheckBox
+        android:id="@+id/cbd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/cbE"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_disabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/cbd"
+        app:layout_constraintBottom_toBottomOf="@id/cbd"/>
+
+
+    <CheckBox
+        android:id="@+id/cbdS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:checked="true"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/cbd"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDisableSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_disabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/cbdS"
+        app:layout_constraintBottom_toBottomOf="@id/cbdS"/>
+
+    <com.buildware.widget.indeterm.IndeterminateCheckBox
+        android:id="@+id/cbeinderterminate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:indeterminate="true"
+        app:layout_constraintStart_toStartOf="@id/cbdS"
+        app:layout_constraintEnd_toEndOf="@id/cbdS"
+        app:layout_constraintTop_toBottomOf="@id/cbdS"/>
+
+    <TextView
+        android:id="@+id/tvindeterminateenable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_enabled_indeterminate"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/cbeinderterminate"
+        app:layout_constraintBottom_toBottomOf="@id/cbeinderterminate"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

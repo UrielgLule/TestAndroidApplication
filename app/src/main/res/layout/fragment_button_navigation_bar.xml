@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ButtonNavigationBarFragment">
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottomNavigation"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="bottom"
+       app:menu="@menu/menu_button_nav"
+       android:background="@android:color/holo_orange_dark"
+       app:itemIconTint="@drawable/boton_icom"
+       app:itemTextColor="@drawable/boton_icom"
+       />
+       <!--style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"-->
+
+</FrameLayout>
